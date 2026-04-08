@@ -1,0 +1,51 @@
+paths:
+  /api/mocks/users:
+    get:
+      summary: Obtiene todos los usuarios de la base de datos.
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Lista de usuarios obtenida exitosamente.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+                  payload:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/User'
+  /api/mocks/mockingusers:
+    get:
+      summary: Genera 50 usuarios de prueba (Mocks).
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Usuarios generados exitosamente.
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: ID autogenerado por MongoDB.
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+        role:
+          type: string
+          enum: [user, admin]
+        pets:
+          type: array
+          items:
+            type: object

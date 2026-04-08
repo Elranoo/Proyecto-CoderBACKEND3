@@ -1,28 +1,31 @@
 {
   "name": "preentrega",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto final de Backend - Mocks, Testing y Docker",
   "type": "module",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Elranoo/Proyecto-CoderBACKEND3.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Thiago",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Elranoo/Proyecto-CoderBACKEND3/issues"
-  },
-  "homepage": "https://github.com/Elranoo/Proyecto-CoderBACKEND3#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "dotenv": "^17.4.1",
     "express": "^5.2.1",
-    "mongoose": "^9.2.1"
+    "mongoose": "^9.2.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "mocha": "^11.7.5",
+    "supertest": "^7.2.2"
   }
 }
